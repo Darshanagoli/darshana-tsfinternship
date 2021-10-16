@@ -1,1 +1,1 @@
-# darshana-tsfinternship
+This is my internship task.The task was to develop a Basic Banking System where a account holder can transfer money from one account to another.The account holder can also withdraw and deposit his/her money.
