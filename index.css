@@ -1,0 +1,78 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-image:url("bankbackground1.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+}
+#bankname
+{
+	position:absolute;
+	top:150px;
+	left:415px;
+	color:white;;
+	font-family:"Trirong";
+	font-size:100px;
+	text-shadow:3px 3px 3px black;
+}
+h3
+{
+	position:absolute;
+	top:280px;
+	left:380px;
+	font-size:40px;
+	color:white;
+	font-family:"Trirong";
+}
+#tag
+{
+	position:absolute;
+	top:340px;
+	left:500px;
+	color:white;
+	font-size:25px;
+	font-family:"Trirong";
+}
+button
+{
+	background-color:white;
+	color:blue;
+	border-radius:20px;
+	position:absolute;
+	top:400px;
+	left:560px;
+	padding:10px 30px;
+	font-size:30px;
+}
+button:hover
+{
+	opacity:0.7;
+}
+.nav-link
+{
+	border:2px solid black;
+	margin-left:10px;
+	border-radius: 10px;
+}
+.navbar
+{
+	border-top:2px solid black;
+    border-bottom:2px solid black;
+}
+.navbar-brand:hover,.nav-link:hover
+{
+	background-color:gainsboro;
+}
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+  }
+  
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
