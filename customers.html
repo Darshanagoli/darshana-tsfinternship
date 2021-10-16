@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Customers list</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="customers.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css">
+    </head>
+    <body>
+        <div id="mainbody">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+            <a class="navbar-brand" href="https://www.thesparksfoundationsingapore.org/">TSF BANK</a>
+            <a class="navbar-brand" href="#"><i class="fa fa-bank"></i></a>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">View Customers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#transfermoney">Transfer Money</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#withdraw">Withdraw</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#deposit">Deposit</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#transferhistory">Transfer History</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+        <div class="my-info text-center p-3">
+            <h2>Name: Darshana Goli</h2>
+            <!--<h4>Net Bank Balance: Rs.<span id="accountbalance">50000</span></h4>-->
+            <br>
+            <a href="#" id="button1" data-toggle="modal" data-target="#transfermoney">Transfer Money</a>
+            <a href="#" id="button2" data-toggle="modal" data-target="#withdraw">Withdraw</a>
+            <a href="#" id="button3" data-toggle="modal" data-target="#deposit">Deposit</a>
+            <a href="#" id="button4" onclick="transferhistory()" data-toggle="modal" data-target="#transferhistory">Transfer History</a>      
+        </div>
+        
+        <div class="container-fluid">
+        <div class="table-responsive-lg">
+        <table class="table-bordered mt-5 mb-5 table-hover">
+            <thead class="table-dark">
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Balance (in Rs.)</th>
+                <th scope="col">View</th>
+                </tr>
+            </thead>
+            <tbody class="table-light">
+                <tr>
+                    <td>1</td>
+                    <td>Darshana Goli</td>
+                    <td>darshanagoli@email.com</td>
+                    <td id="darshanagoliBankBalance">10000</td>
+                    <td><button onclick="customer1()" class="button" >View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Shreyasi Goli</td>
+                    <td>shreyasigoli@email.com</td>
+                    <td id="shreyasigoliBankBalance">20000</td>
+                    <td><button onclick="customer2()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Ramadevi Goli</td>
+                    <td>ramadevigoli@email.com</td>
+                    <td id="ramadevigoliBankBalance">5000</td>
+                    <td><button onclick="customer3()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Govardhan Goli</td>
+                    <td>govardhangoli@email.com</td>
+                    <td id="govardhangoliBankBalance">50000</td>
+                    <td><button onclick="customer4()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Shubham Shriram</td>
+                    <td>shubhamshriram@email.com</td>
+                    <td id="shubhamshriramBankBalance">18000</td>
+                    <td><button onclick="customer5()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Ruchika Vadnal</td>
+                    <td>ruchikavadnal@email.com</td>
+                    <td id="ruchikavadnalBankBalance">100000</td>
+                    <td><button onclick="customer6()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Mayur Macharla</td>
+                    <td>mayurmacharla@email.com</td>
+                    <td id="mayurmacharlaBankBalance">200000</td>
+                    <td><button onclick="customer7()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Monika Kondi</td>
+                    <td>monikakondi@email.com</td>
+                    <td id="monikakondiBankBalance">100000</td>
+                    <td><button onclick="customer8()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Shriharsha Gangul</td>
+                    <td>shrigangul@email.com</td>
+                    <td id="shriharshagangulBankBalance">15000</td>
+                    <td><button onclick="customer9()" class="button">View Customer</button></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Ram Gangul</td>
+                    <td>ramgangul@email.com</td>
+                    <td id="ramgangulBankBalance">11000</td>
+                    <td><button onclick="customer10()" class="button">View Customer</button></td>
+                </tr>
+            </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="transfermoney" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                 <div class="modal-header">
+                      <h4 class="modal-title">Transfer Money</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                 </div>
+                 <div class="modal-body">
+                     <form action="">
+                      <label for="sname">Sender's Name:</label>
+                      <input type="text" id="sname" class="form-control" placeholder="sendername" aria-label="sender name">
+                      <br>
+                      <label for="rname">Receiver's Name:</label>
+                      <input type="text" id="rname" class="form-control" placeholder="receivername" aria-label="receiver name">
+                      <br>
+                      <label for="amount">Enter Amount in Rupees:</label>
+                      <input type="text" id="amount" class="form-control" placeholder="0000" aria-labelledby="Amount"/>
+                      <br>
+                      </form>
+                 </div>
+                 <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button type="button" onclick="transfermoney()" class="btn btn-success" data-dismiss="modal">Send</button>
+                 </div>
+            </div>
+       </div>
+    </div>
+    <div class="modal fade" id="transferhistory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                 <div class="modal-header">
+                      <h4 class="modal-title">Transfer History</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                 </div>
+                 <div class="modal-body">
+                      <ol id="transferhistorycontent"></ol>
+                 </div>
+                 <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                 </div>
+            </div>
+       </div>
+    </div>
+    <div class="modal fade" id="withdraw" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                 <div class="modal-header">
+                      <h4 class="modal-title">Withdrawal</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                 </div>
+                 <div class="modal-body">
+                     <form action="">
+                      <label for="name">Name:</label>
+                      <input type="text" id="wname" class="form-control" placeholder="name" aria-label="your name">
+                      <br>
+                      <label for="wamount">Enter Amount in Rupees:</label>
+                      <input type="text" id="wamount" class="form-control" placeholder="0000" aria-labelledby="Amount"/>
+                      <br>
+                      </form>
+                 </div>
+                 <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button type="button" onclick="withdraw()" class="btn btn-success" data-dismiss="modal">Withdraw</button>
+                 </div>
+            </div>
+       </div>
+    </div>
+    <div class="modal fade" id="deposit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                 <div class="modal-header">
+                      <h4 class="modal-title">Deposit</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                 </div>
+                 <div class="modal-body">
+                     <form action="">
+                      <label for="dname">Name:</label>
+                      <input type="text" id="dname" class="form-control" placeholder="name" aria-label="your name">
+                      <br>
+                      <label for="damount">Enter Amount in Rupees:</label>
+                      <input type="text" id="damount" class="form-control" placeholder="0000" aria-labelledby="Amount"/>
+                      <br>
+                      </form>
+                 </div>
+                 <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      <button type="button" onclick="deposit()" class="btn btn-success" data-dismiss="modal">Deposit</button>
+                 </div>
+            </div>
+       </div>
+    </div>
+        <div id="customer1" class="text-center">
+            <p>ID:1</p>
+            <p>Name: Darshana Goli</p>
+            <p>Email: darshanagoli@email.com</p>
+            <p>Account Balance:<span id="darshanagoliBankBalance1">10000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer2" class="text-center">
+            <p>ID:2</p>
+            <p>Name: Shreyasi Goli</p>
+            <p>Email: shreyasigoli@email.com</p>
+            <p>Account Balance:<span id="shreyasigoliBankBalance1">20000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer3" class="text-center">
+            <p>ID:3</p>
+            <p>Name: Ramadevi Goli</p>
+            <p>Email: ramadevigoli@email.com</p>
+            <p>Account Balance:<span id="ramadevigoliBankBalance1">5000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer4" class="text-center">
+            <p>ID:4</p>
+            <p>Name: Govardhan Goli</p>
+            <p>Email: govardhangoli@email.com</p>
+            <p>Account Balance:<span id="govardhangoliBankBalance1">50000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer5" class="text-center">
+            <p>ID:5</p>
+            <p>Name: Shubham Shriram</p>
+            <p>Email: shubhamshriram@email.com</p>
+            <p>Account Balance:<span id="shubhamshriramBankBalance1">18000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer6" class="text-center">
+            <p>ID:6</p>
+            <p>Name: Ruchika Vadnal</p>
+            <p>Email: ruchikavadnal@email.com</p>
+            <p>Account Balance:<span id="ruchikavadnalBankBalance1">100000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer7" class="text-center">
+            <p>ID:7</p>
+            <p>Name: Mayur Macharla</p>
+            <p>Email: mayurmacharla@email.com</p>
+            <p>Account Balance:<span id="mayurmacharlaBankBalance1">200000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer8" class="text-center">
+            <p>ID:8</p>
+            <p>Name: Monika Kondi</p>
+            <p>Email: monikakondi@email.com</p>
+            <p>Account Balance:<span id="monikakondiBankBalance1">100000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer9" class="text-center">
+            <p>ID:9</p>
+            <p>Name: Shriharsha Gangul</p>
+            <p>Email: shriharshagangul@email.com</p>
+            <p>Account Balance:<span id="shriharshagangulBankBalance1">15000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+        <div id="customer10" class="text-center">
+            <p>ID:10</p>
+            <p>Name: Ram Gangul</p>
+            <p>Email: ramgangul@email.com</p>
+            <p>Account Balance:<span id="ramgangulBankBalance1">11000</span></p>
+            <button class="back" type="button" onclick="back()">Back</button>
+        </div>
+
+        
+    <script src="balance.js"></script>
+    <script src="customer.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"></script>
+    </body>
+</html>
